@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>İkinci Sayfa</h1>
+    <a href="deneme.html">
+         <input type="button" value="Go to First Page">  
+    </a>
+           
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+        ["resim1", "resim2", "resim3"].forEach(function (id) {
+            const kayitliResim = localStorage.getItem(id);
+            const resim = document.getElementById(id);
+
+            if (kayitliResim && resim) {
+                resim.setAttribute("src", kayitliResim);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
